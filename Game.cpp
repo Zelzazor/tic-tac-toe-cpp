@@ -60,17 +60,17 @@ void Game::Move(int row, int column){
 
 bool Game::checkVictory(){
     for(int i = 0; i < 3; i++){
-        if (board.gameboard[i][0] == board.gameboard[i][1] && board.gameboard[i][1] == board.gameboard[i][2] && board.gameboard[i][0] != 'e') {
+        if (board.gameboard[i][0] == board.gameboard[i][1] && board.gameboard[i][1] == board.gameboard[i][2] && board.gameboard[i][0] != ' ') {
                 return true;
         }
-        if (board.gameboard[0][i] == board.gameboard[1][i] && board.gameboard[1][i] == board.gameboard[2][i] && board.gameboard[0][i] != 'e') {
+        if (board.gameboard[0][i] == board.gameboard[1][i] && board.gameboard[1][i] == board.gameboard[2][i] && board.gameboard[0][i] != ' ') {
                 return true;
         }
     }
-    if (board.gameboard[0][0] == board.gameboard[1][1] && board.gameboard[1][1] == board.gameboard[2][2] && board.gameboard[0][0] != 'e') {
+    if (board.gameboard[0][0] == board.gameboard[1][1] && board.gameboard[1][1] == board.gameboard[2][2] && board.gameboard[0][0] != ' ') {
             return true;
     }
-    if (board.gameboard[0][2] == board.gameboard[1][1] && board.gameboard[1][1] == board.gameboard[2][0] && board.gameboard[0][2] != 'e') {
+    if (board.gameboard[0][2] == board.gameboard[1][1] && board.gameboard[1][1] == board.gameboard[2][0] && board.gameboard[0][2] != ' ') {
             return true;
     }
 
@@ -80,7 +80,7 @@ bool Game::checkVictory(){
 bool Game::checkTie(){
     for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (board.gameboard[i][j] == 'e') {
+                if (board.gameboard[i][j] == ' ') {
                     return false;
                 }
             }

@@ -26,7 +26,7 @@ char Player::getTile(){
 }
 
 bool Player::makeMove(GameBoard* board, int row, int column){
-    if(board->gameboard[row][column] == 'e'){
+    if(board->gameboard[row][column] == ' '){
         board->gameboard[row][column] = getTile();
         return true;
     }

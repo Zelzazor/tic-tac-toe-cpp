@@ -9,7 +9,7 @@ using namespace std;
 void Show(GameBoard* tablero){
     for(int i = 0; i < 3; i++){
         for(int j = 0; j < 3; j++){
-            if(tablero->gameboard[i][j] == 'e'){
+            if(tablero->gameboard[i][j] == ' '){
                 cout << "  ";
             }
             else{
